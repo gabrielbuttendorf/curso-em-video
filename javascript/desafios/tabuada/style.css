@@ -1,0 +1,76 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(128, 168, 228);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header, footer {
+    padding: 15px;
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    width: 60vw;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.363);
+}
+
+#div-entrada > input {
+    font-size: 1em;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#select-saida > option {
+    font-size: 1.2em;
+    padding: 5px 5px 0px 5px;
+}
+
+footer > a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+footer > a:hover {
+    font-size: 1.05em;
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        text-align: center;
+        width: 80vw;
+    }
+    
+    #div-entrada {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #div-entrada > label {
+        margin-bottom: 10px;
+    }
+
+    #div-entrada > input {
+        text-align: center;
+    }
+
+    #div-saida { margin-top: 0px; }
+
+    #select-saida > option {
+        font-size: 1em;
+        padding: 5px 5px 0px 5px;
+    }
+}

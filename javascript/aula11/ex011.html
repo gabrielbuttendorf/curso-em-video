@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Aqui no Brasil, você é Brasileiro ou Estrangeiro?</h1>
+    <label for="textNac">Em qual país você nasceu?</label>
+    <input type="text" name="textCountry" id="textCountry">
+    <input type="button" value="Descubra" onclick="DescubraNacionalidade()">
+    <div id="textResultado"></div>
+
+    <script>
+        function DescubraNacionalidade() {
+            var country = window.document.getElementById('textCountry').value.toLowerCase()
+            var resultado = window.document.getElementById('textResultado')
+
+            if (country != 'brasil') {
+                resultado.innerHTML = `<p>Seu país de origem é ${country.toUpperCase()}, portanto, no BRASIL você é estrangeiro.</p>`
+            } else {
+                resultado.innerHTML = `<p>Já que você nasceu no ${country.toUpperCase()}, você é brasileiro.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

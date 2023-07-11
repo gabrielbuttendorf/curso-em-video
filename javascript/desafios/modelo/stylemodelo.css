@@ -1,0 +1,27 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(128, 168, 228);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header, footer {
+    padding: 15px;
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    width: 60vw;
+    max-width: 800px;
+    border-radius: 10px;
+}

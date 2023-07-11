@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'kenyan-coffee';
+    src: url(fonts/kenyan-coffee-regular.otf);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(16px, 2.2vw, 25px);
+    transition: 0.2s;
+}
+
+body, html {
+    background: linear-gradient(180deg, #81c3d7, #16425b) fixed;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: clamp(18px, 4vw, 40px);
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    width: 70vw;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#div-ano {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+#label-ano {
+    white-space: nowrap;
+    padding-right: 5px;
+}
+
+#elementoAno {
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 10px;
+    border: 1px solid #81c3d7;
+    font-size: 0.85em;
+    text-indent: 10px;
+    height: 46px;
+}
+#elementoAno:focus {outline: 1px solid #81c3d7;}
+
+#div-genero {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#div-genero input[type="radio"], #div-genero label {
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+input[type="radio"] {
+    width: 2.5vw;
+    max-width: 20px;
+    height: 2.5vw;
+    max-height: 20px;
+}
+
+input[type="button"] {
+    width: 100%;
+    background-color: #81c3d7;
+    color: white;
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
+input[type="button"]:hover {background-color: #30a4c7;}
+input[type="button"]:hover, input[type="radio"]:hover, .label-genero:hover {cursor: pointer;}
+
+#div-resultado {text-align: center;}
+#elementTextResultado {margin-top: 20px;}
+
+img {
+    width: 50%;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    #div-ano {
+        display: block;
+        text-align: center;
+    }
+    
+    #label-ano {
+        white-space: normal;
+        padding-right: 0px;
+    }
+
+    #elementoAno {
+        text-align: center;
+        height: 36px;
+        margin-top: 10px;
+    }
+
+    #div-genero {display: block;}
+}

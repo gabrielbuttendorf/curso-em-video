@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: #3d5969;
+            color: white;
+            font: normal 1.2em Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="mensagem">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] //armazenando o primeiro p do código dentro de p1
+        var teste = window.document.getElementById('mensagem') //armazenando a div por id dentro de uma var
+        teste.style.background = 'green' //mudando a cor do background da div
+        teste.innerText = 'Ficou verde' //inserindo novo texto para essa div
+
+        var divCor = window.document.querySelector('#mensagem').style.color = 'white'
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 13 Parte 01</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 300px;
+            height: 250px;
+            margin-bottom: 50px;
+        }
+
+        th {
+            height: 40px;
+            border: 1px solid black;
+            background-color: bisque;
+        }
+        
+        #tecladoNum {
+            width: 300px;
+            height: 250px;
+        }
+
+        #tecladoNum td{
+            width: 60px;
+            height: 60px;
+        }
+        
+        td {
+            border: 1px solid black;
+            text-align: center;
+            width: 55px;
+            height: 45px;
+        }
+
+        td:hover {
+            cursor: pointer;
+        }
+
+        td:active {
+            transform: scale(98%);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <th colspan="4">Desafio 01</th>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td colspan="3">8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td rowspan="2">10</td>
+            <td colspan="2">11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td> 
+        </tr>
+    </table>
+    
+    <table>
+        <th colspan="5">Desafio 02</th>
+        <tr>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
+        </tr>
+        <tr>
+            <td rowspan="4">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+        </tr>
+        <tr>
+            <td colspan="4">M</td>
+        </tr>
+    </table>
+
+    <table id="tecladoNum">
+        <th colspan="4">Extra - Teclado Numérico</th>
+        <tr>
+            <td class="menor">NumLock</td>
+            <td>/</td>
+            <td>*</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td rowspan="2">+</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td rowspan="2">Enter</td>
+        </tr>
+        <tr>
+            <td colspan="2">0</td>
+            <td>,</td>
+        </tr>
+    </table>
+    </body>
+    </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20px Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function Quebra() {
+            document.writeln('<br>')
+        }
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Prazer, <strong>${nome}</strong>. `)
+        Quebra()
+        document.write(`Seu nome tem <strong>${nome.length}</strong> letras`)
+        Quebra()
+        document.write(`Seu nome em maiúsculas fica <strong>${nome.toUpperCase()}</strong>.`)
+        Quebra()
+        document.write(`Seu nome em minúsculas fica <strong>${nome.toLowerCase()}</strong>.`)
+
+        // document.write('Prazer, ' + '<strong>' + nome + '</strong>' + '.' )
+        // Quebra()
+        // document.write('Seu nome tem ' + '<strong>' + nome.length + '</strong>' + ' letras')
+        // Quebra()
+        // document.write('Seu nome em maiúsculas fica ' + '<strong>' + nome.toUpperCase() + '</strong>' + '.')
+        // Quebra()
+        // document.write('Seu nome em minúsculas fica ' + '<strong>' + nome.toLowerCase() + '</strong>' + '.')
+    </script>
+</body>
+</html>

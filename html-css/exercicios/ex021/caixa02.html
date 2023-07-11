@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            padding: 6px;
+            background-color: gray;
+            box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.479);
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            padding-right: 25px;
+        }
+        
+        nav > a:hover {
+            text-decoration: underline;
+            color: rgb(226, 242, 255);
+            font-size: 16.4px;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        article {
+            background-color: aliceblue;
+            padding: 10px;
+        }
+
+        article > aside {
+            background-color: rgb(216, 231, 245);
+        }
+
+        article > aside > p {
+            padding: 7px;
+        }
+
+        footer {
+            background-color: gray;
+            padding: 10px;
+        }
+
+        footer > p {
+            text-align: center;
+            color: aliceblue;
+            font-size: 1.05em;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit molestiae id quidem? Iure architecto, voluptate amet, facilis aut molestiae quae, quisquam sint culpa harum voluptates! Corporis repellendus explicabo enim animi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorum inventore eos eum itaque architecto sequi voluptatibus voluptas sint repellendus eius, fugiat, ut temporibus veritatis repudiandae iure unde doloribus amet?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident iusto impedit possimus ad sequi quod eos perspiciatis commodi temporibus veritatis similique ipsum nostrum quis reiciendis saepe quae, blanditiis quidem ab quam culpa accusantium deserunt a. Modi totam odio quam voluptate rerum cupiditate tenetur veniam fuga non quas voluptatem laborum nostrum dolore atque rem impedit, hic assumenda officiis culpa pariatur. Quisquam aperiam, ratione debitis dolore fugit eaque consequatur ipsam! Aliquid itaque atque reprehenderit aut assumenda nobis exercitationem vel adipisci optio mollitia error impedit, beatae alias debitis doloribus commodi voluptatum ea! Sit.</p>
+                <aside>
+                    <p>Escrito por Pedro da Silva Campos</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Gabriel Felipe Buttendorf</p>
+    </footer>
+</body>
+</html>

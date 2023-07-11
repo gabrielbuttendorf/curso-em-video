@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        @charset "UTF-8";
+        
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh; /* serve para deixar sempre centralizado na vertical */
+        }
+
+        h1 {
+            margin: 20px;
+            font-size: clamp(16px, 5vw, 70px);
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.295);
+            color: white;
+        }
+
+        #section-horario {
+            background-color: white;
+            width: 60vw;
+            max-width: 800px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.295);
+        }
+        
+        #elementMsgHora {
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        #elementImagem {
+            border-radius: 50%;
+            width: 50%;
+        }
+
+        #elementCreditos {
+            text-decoration: none;
+            display: inline-block; /* se não tiver um display block a margem não funciona */
+            margin: 20px;
+            font-size: clamp(12px, 2.5vw, 30px);
+            /* min, largura ajustavel, max */
+        }
+
+        #elementCreditos:hover {transform: scale(1.05);}
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Hora do Dia</h1>
+        <section id="section-horario">
+            <p id="elementMsgHora">Agora são X horas</p>
+            <img id="elementImagem" alt="Paisagem">
+        </section>
+        <a id="elementCreditos" href="https://www.instagram.com/bieel.felipe_/" target="_blank" rel="external">@bieel.felipe_</a>
+    </main>
+
+    <script>
+        var horaArredondada = new Date().getHours()
+        var horaCompleta = new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'} )
+
+        var fundo = window.document.body
+        var msgHora = window.document.getElementById('elementMsgHora') 
+        var imagem = window.document.getElementById('elementImagem')
+        var creditos = window.document.getElementById('elementCreditos')
+
+// ------------------------------------ MANHÃ --------------------------------
+        if (horaArredondada < 12) {
+            msgHora.innerText = `Agora são ${horaCompleta}`
+            fundo.style.backgroundColor = '#EAD8AB'
+            imagem.src = 'https://images.pexels.com/photos/6010396/pexels-photo-6010396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            creditos.style.color = '#F8EBCB'
+
+            creditos.onmouseenter = function() {
+                creditos.style.color = '#BDA770'
+                creditos.style.transition = '0.3s'
+            }
+
+            creditos.onmouseout = function() {
+                creditos.style.color = '#F8EBCB'
+            }
+// ------------------------------------ TARDE --------------------------------
+        } else if (horaArredondada >= 12 && horaArredondada < 18) {
+            msgHora.innerText = `Agora são ${horaCompleta}`
+            fundo.style.backgroundColor = '#D9EAAB'
+            imagem.src = 'https://images.pexels.com/photos/4612724/pexels-photo-4612724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            creditos.style.color = '#EFFACF'
+
+            creditos.onmouseenter = function() {
+                creditos.style.color = '#A9BE71'
+                creditos.style.transition = '0.3s'
+            }
+
+            creditos.onmouseout = function() {
+                creditos.style.color = '#EFFACF'
+            }
+// ------------------------------------ NOITE --------------------------------
+        } else {
+            msgHora.innerText = `Agora são ${horaCompleta}`
+            fundo.style.backgroundColor = '#ABACEA'
+            imagem.src = 'https://images.pexels.com/photos/1797672/pexels-photo-1797672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            creditos.style.color = '#CACBF6'
+
+            creditos.onmouseenter = function() {
+                creditos.style.color = '#7576C4'
+                creditos.style.transition = '0.3s'
+            }
+
+            creditos.onmouseout = function() {
+                creditos.style.color = '#CACBF6'
+            }
+        }
+    </script>
+</body>
+</html>

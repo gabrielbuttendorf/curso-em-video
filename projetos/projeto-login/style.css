@@ -1,0 +1,376 @@
+/* paleta de cores 
+
+azul-royal: #2964D9;
+azul-fosco: #527FD9;
+azul-preto: #364159;
+cinza: #8F96A6;
+azul-marinho: #183459;
+
+/* device breakpoints 
+
+Mobile devices – 320px — 480px.
+iPads, Tablets – 481px — 768px.
+Small screens, laptops – 769px — 1024px.
+Desktops, large screens – 1025px — 1200px.
+Extra large screens, TV – 1201px, and more.
+
+*/
+
+* {
+	font-family: arial, helvetica, sans-serif;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+html, body {
+	background-color: #527FD9;
+	width: 100vw;
+	height: 100vh;
+}
+
+main {
+	position: relative;
+	height: 100vh;
+    width: 100vw;
+	/* overflow-y: hidden; */
+}
+
+section#login {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	transform: translate(-50%, -50%);
+	transition: width 0.3s, height 0.2s;
+	transition-timing-function: ease;
+}
+
+div#imagem {
+	background-image: url(imagens/imagem-principal.jpg);
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+div#formulario {
+	background-color: white;
+	box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+div#formulario > h1 {
+	text-align: center;
+	color: #2964D9;
+	text-shadow: 0px 2px 3px #102a5e96;
+}
+
+form > div.campo-input {
+	display: flex;
+	align-items: center;
+	background-color: #364159;
+	width: 100%;
+	height: 45px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+form > div.campo-input span {
+	color: white;
+	margin: 5px;
+	font-size: 1.7em;
+}
+
+form input {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	font-size: 1em;
+	text-indent: 10px;
+}
+
+form input:focus-within {
+	background-color: #e7eefd;
+	outline: none;
+}
+
+form input[type=submit] {
+	height: 45px;
+	background-color: #8F96A6;
+	color: white;
+	font-weight: bold;
+	border: none;
+}
+
+form > a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	width: 100%;
+	height: 45px;
+	border-radius: 8px;
+	margin-top: 10px;
+	background-color: #8F96A6;
+	color: white;
+	font-weight: bold;
+}
+
+form input[type=submit]:hover, form > a:hover {
+	cursor: pointer;
+	background-color: #2964D9;
+	transition: 0.3s;
+}
+
+form input[type=submit]:active, form > a:active {
+	transform: scale(97%);
+	transition: 0.3s;
+}
+
+form > a > span {
+	margin-left: 5px;
+}
+
+/* ------------------------ MOBILE ------------------------ */
+
+@media screen and (max-width: 480px) {
+	html, body {
+		background-color: #527FD9;
+	}
+
+	section#login {
+		width: 290px;
+		height: 530px;
+	}
+
+	div#imagem {
+        display: block;
+        height: 200px;
+		background-position: center center;
+		border-radius: 15px 15px 0px 0px;
+	}
+	
+	div#formulario {
+        display: block;
+        padding: 8px;
+		border-radius: 0px 0px 15px 15px;
+	}
+
+	div#formulario > h1 {
+		font-size: 1.6em;
+	}
+
+	div#formulario > p {
+		font-size: 0.94em;
+		padding: 10px 0px;
+	}
+}
+
+/* ------------------------ TABLET ------------------------ */
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+	html, body {
+		background-color: #527FD9;
+	}
+
+	section#login {
+		width: 90vw;
+		height: 290px;
+	}
+	div#imagem {
+        display: block;
+		float: left;
+		background-position: center center;
+		width: 30%;
+		height: 100%;
+		border-radius: 15px 0px 0px 15px;
+	}
+	
+	div#formulario {
+        display: block;
+		float: right;
+        padding: 0px 10px;
+		width: 70%;
+		height: 100%;
+		border-radius: 0px 15px 15px 0px; 
+	}
+
+	div#formulario > h1 {
+		font-size: 1.9em;
+	}
+
+	div#formulario > p {
+		font-size: 1em;
+		padding: 5px 0px;
+	}
+
+	form > div.campo-input, form > input[type=submit], form > a {
+		margin-top: 5px;
+		margin-bottom: 0px;
+		height: 40px;
+	}
+}
+
+/* ------------------------ SMALL SCREENS ------------------------ */
+
+@media screen and (min-width: 901px) and (max-width: 1024px) {
+	html, body {
+		background: linear-gradient(180deg, #2964D9, #183459) fixed;
+	}
+
+	section#login {
+		width: 90vw;
+		height: 405px;
+	}
+	div#imagem {
+        display: block;
+		float: right;
+		background-position: center center;
+		width: 40%;
+		height: 100%;
+		border-radius: 0px 15px 15px 0px; 
+	}
+	
+	div#formulario {
+        display: block;
+		float: left;
+        padding: 10px;
+		width: 60%;
+		height: 100%;
+		border-radius: 15px 0px 0px 15px;
+	}
+
+	div#formulario > h1 {
+		padding-top: 10px;
+		font-size: 2.2em;
+	}
+
+	div#formulario > p {
+		font-size: 1.2em;
+		padding: 18px 0px;
+	}
+
+	form > div.campo-input span {
+		margin: 8px;
+		font-size: 1.8em;
+	}
+
+	form > div.campo-input, form > input[type=submit], form > a {
+		height: 50px;
+	}
+
+	form input, form a {
+		font-size: 1.1em;
+		letter-spacing: 0.5px;
+	}
+}
+
+/* ------------------------ LARGE SCREENS ------------------------ */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+	html, body {
+		background: linear-gradient(180deg, #2964D9, #183459) fixed;
+	}
+
+	section#login {
+		width: 90vw;
+		height: 460px;
+	}
+	div#imagem {
+        display: block;
+		float: right;
+		background-position: center center;
+		width: 50%;
+		height: 100%;
+		border-radius: 0px 15px 15px 0px; 
+	}
+	
+	div#formulario {
+        display: block;
+		float: left;
+        padding: 10px;
+		width: 50%;
+		height: 100%;
+		border-radius: 15px 0px 0px 15px;
+	}
+
+	div#formulario > h1 {
+		padding-top: 15px;
+		font-size: 2.3em;
+	}
+
+	div#formulario > p {
+		font-size: 1.3em;
+		padding: 25px 0px;
+	}
+
+	form > div.campo-input span {
+		margin: 10px;
+		font-size: 2em;
+	}
+
+	form > div.campo-input, form > input[type=submit], form > a {
+		height: 55px;
+	}
+
+	form input, form a {
+		font-size: 1.1em;
+		letter-spacing: 0.7px;
+	}
+}
+
+/* ------------------------ EXTRA LARGE SCREENS ------------------------ */
+
+@media screen and (min-width: 1201px) {
+	html, body {
+		background: linear-gradient(180deg, #2964D9, #183459) fixed;
+	}
+
+	section#login {
+		width: 90vw;
+		max-width: 1200px;
+		height: 500px;
+	}
+	div#imagem {
+        display: block;
+		float: right;
+		background-position: center center;
+		width: 50%;
+		height: 100%;
+		border-radius: 0px 15px 15px 0px; 
+	}
+	
+	div#formulario {
+        display: block;
+		float: left;
+        padding: 10px;
+		width: 50%;
+		height: 100%;
+		border-radius: 15px 0px 0px 15px;
+	}
+
+	div#formulario > h1 {
+		padding-top: 15px;
+		font-size: 2.5em;
+	}
+
+	div#formulario > p {
+		font-size: 1.4em;
+		padding: 30px 0px;
+	}
+
+	form > div.campo-input span {
+		margin: 10px;
+		font-size: 2em;
+	}
+
+	form > div.campo-input, form > input[type=submit], form > a {
+		height: 60px;
+	}
+
+	form input, form a {
+		font-size: 1.3em;
+		letter-spacing: 0.7px;
+	}
+}

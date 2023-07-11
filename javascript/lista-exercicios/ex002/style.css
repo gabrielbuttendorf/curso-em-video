@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+:root {
+    --corPrincipal: #f7ca39
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #1f1f1f;
+}
+
+main, header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+main {
+    font-size: 1.2em;
+}
+
+header .titulo {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: #fffff9;
+}
+
+section {
+    background-color: var(--corPrincipal);
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 12px;
+}
+
+#div-entrada {
+    display: flex;
+    align-items: center;
+}
+
+#div-entrada input {
+    border: 1px solid #1f1f1f;
+    height: 24px;
+    padding: 0px 6px;
+    margin: 0px 4px;
+    border-radius: 4px;
+}
+
+#div-entrada input:focus {
+    outline: none;
+    box-shadow: 0px 0px 1px 1px #1f1f1f8c;
+}
+
+#div-entrada button {
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fffff9;
+    font-weight: 600;
+    padding: 0px 10px;
+    margin-right: 4px;
+    transition: all 0.2s ease;
+}
+
+#div-entrada button:enabled:hover {
+    cursor: pointer;
+    background-color: #363636;
+    color: #fffff9;
+}
+
+#div-entrada button:active {
+    transform: scale(97%);
+}
+
+#resultado {
+    margin-top: 10px;
+}
+
+footer {
+    color: var(--corPrincipal);
+}
+
+footer .svgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0px;
+}
+
+footer svg {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    fill: #fffff9;
+    transition: all 0.3s ease;
+    margin: 0px 10px;
+}
+
+footer .svg-instagram:hover {
+    fill: #e43285;
+}
+footer .svg-github:hover {
+    fill: #8b50e4;
+}
+footer .svg-linkedin:hover {
+    fill: #197cd8;
+}
