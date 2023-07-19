@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antecessor e sucessor</title>
+    <title>Desconto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 class="titulo">Antecessor e sucessor</h1>
+        <h1 class="titulo">Desconto</h1>
     </header>
     <main>
         <section class="principal">
             <div id="div-entrada">
                 <!-- o que precisa ter na entrada de dados vai aqui -->
-                <label for="entrada">Digite um número inteiro: </label>
-                <input type="number" name="entrada" id="entrada" autocomplete="off">
+                <label for="entrada">Insira o valor do produto:</label>
+                <input type="number" name="valor" id="valor" autocomplete="off">
+                <label for="entrada">Insira o desconto(%):</label>
+                <input type="number" name="desconto" id="desconto" autocomplete="off">
                 <button id="inserir" onclick="inserir()">Inserir</button>
             </div>
             <div id="resultado">

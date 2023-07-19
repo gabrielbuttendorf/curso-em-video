@@ -4,129 +4,80 @@ function converter() {
     let unidadeConverter = document.getElementById('select-entrada').value
     let unidadeConvertida = document.getElementById('select-resultado').value
     let inputEntrada = document.getElementById('input-entrada')
-    let valorInserido = Number(inputEntrada.value)
     let inputSaida = document.getElementById('input-saida')
+    let valorInserido = Number(inputEntrada.value)
     let resultado = calcularResultado(valorInserido, unidadeConverter, unidadeConvertida)
     inputSaida.value = resultado
-    console.log(unidadeConverter)
 }
 
 function calcularResultado(valor, unidadeConverter, unidadeConvertida) {
-    if (unidadeConverter == 'km') {
-        if (unidadeConverter == 'km') {
-
-        } else if (unidadeConverter == 'hm') {
-    
-        } else if (unidadeConverter == 'dam') {
-    
-        } else if (unidadeConverter == 'm') {
-    
-        } else if (unidadeConverter == 'dm') {
-    
-        } else if (unidadeConverter == 'cm') {
-    
-        } else if (unidadeConverter == 'mm') {
-    
+    const conversoes = {
+        mm: {
+            km: resultado = valor / 1000000,
+            hm: resultado = valor / 100000,
+            dam: resultado = valor / 10000,
+            m: resultado = valor / 1000,
+            dm: resultado = valor / 100,
+            cm: resultado = valor / 10,
+            mm: resultado = valor / 1
+        },
+        cm: {
+            km: resultado = valor / 100000,
+            hm: resultado = valor / 10000,
+            dam: resultado = valor / 1000,
+            m: resultado = valor / 100,
+            dm: resultado = valor / 10,
+            mm: resultado = valor * 10,
+            cm: resultado = valor / 1
+        },
+        dm: {
+            km: resultado = valor / 10000,
+            hm: resultado = valor / 1000,
+            dam: resultado = valor / 100,
+            m: resultado = valor / 10,
+            cm: resultado = valor * 10,
+            mm: resultado = valor * 100,
+            dm: resultado = valor / 1
+        },
+        m: {
+            km: resultado = valor / 1000,
+            hm: resultado = valor / 100,
+            dam: resultado = valor / 10,
+            dm: resultado = valor * 10,
+            cm: resultado = valor * 100,
+            mm: resultado = valor * 1000,
+            m: resultado = valor / 1
+        },
+        dam: {
+            km: resultado = valor / 100,
+            hm: resultado = valor / 10,
+            m: resultado = valor * 10,
+            dm: resultado = valor * 100,
+            cm: resultado = valor * 1000,
+            mm: resultado = valor * 10000,
+            dam: resultado = valor / 1
+        },
+        hm: {
+            km: resultado = valor / 10,
+            dam: resultado = valor * 10,
+            m: resultado = valor * 100,
+            dm: resultado = valor * 1000,
+            cm: resultado = valor * 10000,
+            mm: resultado = valor * 100000,
+            hm: resultado = valor / 1
+        },
+        km: {
+            hm: resultado = valor * 10,
+            dam: resultado = valor * 100,
+            m: resultado = valor * 1000,
+            dm: resultado = valor * 10000,
+            cm: resultado = valor * 100000,
+            mm: resultado = valor * 1000000,
+            km: resultado = valor / 1
         }
-
-    } else if (unidadeConverter == 'hm') {
-    if (unidadeConverter == 'km') {
-
-    } else if (unidadeConverter == 'hm') {
-
-    } else if (unidadeConverter == 'dam') {
-
-    } else if (unidadeConverter == 'm') {
-
-    } else if (unidadeConverter == 'dm') {
-
-    } else if (unidadeConverter == 'cm') {
-
-    } else if (unidadeConverter == 'mm') {
-
     }
-    } else if (unidadeConverter == 'dam') {
-    if (unidadeConverter == 'km') {
 
-    } else if (unidadeConverter == 'hm') {
-
-    } else if (unidadeConverter == 'dam') {
-
-    } else if (unidadeConverter == 'm') {
-
-    } else if (unidadeConverter == 'dm') {
-
-    } else if (unidadeConverter == 'cm') {
-
-    } else if (unidadeConverter == 'mm') {
-
-    }
-    } else if (unidadeConverter == 'm') {
-    if (unidadeConverter == 'km') {
-
-    } else if (unidadeConverter == 'hm') {
-
-    } else if (unidadeConverter == 'dam') {
-
-    } else if (unidadeConverter == 'm') {
-
-    } else if (unidadeConverter == 'dm') {
-
-    } else if (unidadeConverter == 'cm') {
-
-    } else if (unidadeConverter == 'mm') {
-
-    }
-    } else if (unidadeConverter == 'dm') {
-    if (unidadeConverter == 'km') {
-
-    } else if (unidadeConverter == 'hm') {
-
-    } else if (unidadeConverter == 'dam') {
-
-    } else if (unidadeConverter == 'm') {
-
-    } else if (unidadeConverter == 'dm') {
-
-    } else if (unidadeConverter == 'cm') {
-
-    } else if (unidadeConverter == 'mm') {
-
-    }
-    } else if (unidadeConverter == 'cm') {
-    if (unidadeConverter == 'km') {
-
-    } else if (unidadeConverter == 'hm') {
-
-    } else if (unidadeConverter == 'dam') {
-
-    } else if (unidadeConverter == 'm') {
-
-    } else if (unidadeConverter == 'dm') {
-
-    } else if (unidadeConverter == 'cm') {
-
-    } else if (unidadeConverter == 'mm') {
-
-    }
-    } else if (unidadeConverter == 'mm') {
-    if (unidadeConverter == 'km') {
-
-    } else if (unidadeConverter == 'hm') {
-
-    } else if (unidadeConverter == 'dam') {
-
-    } else if (unidadeConverter == 'm') {
-
-    } else if (unidadeConverter == 'dm') {
-
-    } else if (unidadeConverter == 'cm') {
-
-    } else if (unidadeConverter == 'mm') {
-
-    }
-    }
-    return resultado
+    return conversoes[unidadeConverter][unidadeConvertida]
 }
 
 //acionar usando enter

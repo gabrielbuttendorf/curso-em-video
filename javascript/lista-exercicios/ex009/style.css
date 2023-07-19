@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-    --corPrincipal: #57BD2E;
+    --corPrincipal: #f7ca39
 }
 
 * {
@@ -43,46 +43,32 @@ section {
 
 #div-entrada {
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
 }
 
-#div-entrada div {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 4px;
-}
-
-#div-entrada label {
-    font-size: 0.8em;
-}
-
-#div-entrada input, #div-entrada select {
+#div-entrada input {
     border: 1px solid #1f1f1f;
-    width: 32%;
-    height: 24px;
+    height: 28px;
+    width: 30%;
     padding: 0px 6px;
-    margin: 0px 4px;
+    margin: 6px 0px;
     border-radius: 4px;
-    font-size: 0.8em;
 }
 
-#div-entrada input:focus, #div-entrada select:focus {
+#div-entrada input:focus {
     outline: none;
     box-shadow: 0px 0px 1px 1px #1f1f1f8c;
 }
 
 #div-entrada button {
-    width: 82%;
-    height: 32px;
-    font-size: 0.8em;
+    height: 28px;
+    width: 30%;
     border: none;
     border-radius: 4px;
     background-color: #fffff9;
     font-weight: 600;
     padding: 0px 10px;
-    margin-top: 16px;
     transition: all 0.2s ease;
 }
 

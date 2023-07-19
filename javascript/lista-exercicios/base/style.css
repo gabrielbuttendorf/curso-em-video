@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-    --corPrincipal: #f7ca39
+    --corPrincipal: #f7ca39;
 }
 
 * {
@@ -48,7 +48,7 @@ section {
 
 #div-entrada input {
     border: 1px solid #1f1f1f;
-    height: 24px;
+    height: 28px;
     padding: 0px 6px;
     margin: 0px 4px;
     border-radius: 4px;
@@ -60,7 +60,7 @@ section {
 }
 
 #div-entrada button {
-    height: 24px;
+    height: 28px;
     border: none;
     border-radius: 4px;
     background-color: #fffff9;
